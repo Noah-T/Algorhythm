@@ -16,10 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="zqy-0K-5Ng">
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="bNX-tJ-5dx"/>
+                                    <constraint firstAttribute="width" constant="200" id="maz-AR-QpD"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFH-Sv-uwb">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <rect key="frame" x="137" y="392" width="46" height="30"/>
                                 <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -27,10 +34,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="QFH-Sv-uwb" secondAttribute="centerX" id="Bqx-2E-avK"/>
-                            <constraint firstAttribute="centerY" secondItem="QFH-Sv-uwb" secondAttribute="centerY" id="EEP-ml-e6O"/>
+                            <constraint firstItem="QFH-Sv-uwb" firstAttribute="top" secondItem="zqy-0K-5Ng" secondAttribute="bottom" constant="8" id="Tuh-Yo-UjL"/>
+                            <constraint firstAttribute="centerX" secondItem="zqy-0K-5Ng" secondAttribute="centerX" id="jMQ-Go-q1s"/>
+                            <constraint firstAttribute="centerY" secondItem="zqy-0K-5Ng" secondAttribute="centerY" id="lBu-F8-hzO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Playlists" id="6eN-Ef-vBd"/>
@@ -57,7 +66,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't pressed the button" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7b-nt-SO1">
                                 <rect key="frame" x="40" y="273" width="240" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -68,6 +77,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Artists" id="Ade-cr-eq1"/>
+                    <connections>
+                        <outlet property="buttonPressLabel" destination="h7b-nt-SO1" id="hht-t2-DnG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gfv-6v-Or1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,6 +104,9 @@
             <point key="canvasLocation" x="170" y="338"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coffee" width="53" height="107"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

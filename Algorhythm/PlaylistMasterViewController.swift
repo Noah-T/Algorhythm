@@ -23,7 +23,15 @@ class PlaylistMasterViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        <#code#>
+        if segue.identifier == "showPlaylistDetail"{
+            //looks like "as" is now used for casting
+            let playlistDetailController = segue.destinationViewController as! PlaylistDetailViewController
+            playlistDetailController.segueLabelText = "Yay! You pressed the button"
+            
+
+            
+        }
+        
     }
 
     
