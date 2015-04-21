@@ -36,6 +36,10 @@ struct Playlist {
         
         artists += playlistDictionary["artists"] as! [String]
         
+        let colorsDictionary = playlistDictionary["backgroundColor"] as! [String: CGFloat]
+        backgroundColor = rgbColorFromDictionary(colorsDictionary)
+        
+        
     }
     
     func rgbColorFromDictionary(colorDictionary: [String: CGFloat]) -> UIColor{
@@ -45,7 +49,7 @@ struct Playlist {
         let blue = colorDictionary["blue"]
         let alpha = colorDictionary["alpha"]
         
-        return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: alpha)
+        return UIColor(red: red!/255.0, green: green!/255.0, blue: blue!/255.0, alpha: alpha!)
     }
     
 }
