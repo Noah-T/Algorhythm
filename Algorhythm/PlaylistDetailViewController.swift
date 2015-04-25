@@ -9,7 +9,7 @@
 import UIKit
 
 class PlaylistDetailViewController: UIViewController {
-    @IBOutlet weak var buttonPressLabel: UILabel!
+
     //question mark is an optional. Can have value of nil until actual value is created
     var playlist: Playlist?
 
@@ -17,7 +17,7 @@ class PlaylistDetailViewController: UIViewController {
         super.viewDidLoad()
         
         if playlist != nil {
-            buttonPressLabel.text = playlist!.title
+
         }
     }
 
