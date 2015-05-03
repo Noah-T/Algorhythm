@@ -65,18 +65,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Q2k-A5-Vwo">
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q2k-A5-Vwo">
                                 <rect key="frame" x="0.0" y="64" width="320" height="290"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Q2k-A5-Vwo" secondAttribute="height" multiplier="32:29" id="8vO-l9-KQE"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tA5-qP-GhM">
+                                <rect key="frame" x="0.0" y="234" width="320" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Goes Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vs3-3g-aLS">
+                                        <rect key="frame" x="20" y="10" width="114" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpY-lW-Ies">
+                                        <rect key="frame" x="20" y="39" width="280" height="43"/>
+                                        <string key="text">This is a collection of my favorite songs to listen to when working out. It's got everything from fast cardio to power workout tunes. All the right fuel to get your engine going.
+</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HpY-lW-Ies" secondAttribute="trailing" constant="20" id="FK9-tH-U13"/>
+                                    <constraint firstItem="vs3-3g-aLS" firstAttribute="top" secondItem="tA5-qP-GhM" secondAttribute="top" constant="10" id="K7z-dQ-Z3e"/>
+                                    <constraint firstItem="vs3-3g-aLS" firstAttribute="leading" secondItem="tA5-qP-GhM" secondAttribute="leading" constant="20" id="UP8-QE-ZW0"/>
+                                    <constraint firstAttribute="width" secondItem="tA5-qP-GhM" secondAttribute="height" multiplier="8:3" id="XgR-Aw-7oj"/>
+                                    <constraint firstItem="HpY-lW-Ies" firstAttribute="top" secondItem="vs3-3g-aLS" secondAttribute="bottom" constant="8" id="bcY-GT-KYa"/>
+                                    <constraint firstItem="HpY-lW-Ies" firstAttribute="leading" secondItem="tA5-qP-GhM" secondAttribute="leading" constant="20" id="hOo-VP-d5Y"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Q2k-A5-Vwo" firstAttribute="bottom" secondItem="tA5-qP-GhM" secondAttribute="bottom" id="4bz-1n-li5"/>
                             <constraint firstItem="Q2k-A5-Vwo" firstAttribute="top" secondItem="bRV-fJ-TVM" secondAttribute="bottom" id="AQ0-sl-KBt"/>
                             <constraint firstAttribute="trailing" secondItem="Q2k-A5-Vwo" secondAttribute="trailing" id="QWW-z1-fNS"/>
+                            <constraint firstAttribute="trailing" secondItem="tA5-qP-GhM" secondAttribute="trailing" id="Ubl-bz-KQp"/>
                             <constraint firstItem="Q2k-A5-Vwo" firstAttribute="leading" secondItem="gUx-wY-FHq" secondAttribute="leading" id="jXR-gR-BYq"/>
+                            <constraint firstItem="tA5-qP-GhM" firstAttribute="leading" secondItem="gUx-wY-FHq" secondAttribute="leading" id="sHU-gm-kbJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Artists" id="Ade-cr-eq1"/>
