@@ -11,7 +11,7 @@ import UIKit
 class PlaylistMasterViewController: UIViewController {
     @IBOutlet weak var playlistImageView0: UIImageView!
 
-    @IBOutlet weak var aButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,7 +19,7 @@ class PlaylistMasterViewController: UIViewController {
         
         let playlist = Playlist(index: 0)
         playlistImageView0.image = playlist.icon
-        aButton.setTitle("Press me!", forState: .Normal)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +28,7 @@ class PlaylistMasterViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showPlaylistDetail"{
+        if segue.identifier == "showPlaylistDetailSegue"{
             //looks like "as" is now used for casting
             let playlistDetailController = segue.destinationViewController as! PlaylistDetailViewController
             playlistDetailController.playlist = Playlist(index: 0)
@@ -38,7 +38,12 @@ class PlaylistMasterViewController: UIViewController {
         }
         
     }
-
+    
+    @IBAction func showPlaylistDetail(sender: AnyObject) {
+        println("Hey, stop touching me!")
+        performSegueWithIdentifier("showPlaylistDetailSegue", sender: sender)
+    }
+    
     
 
 }
