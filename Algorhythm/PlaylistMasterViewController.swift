@@ -39,9 +39,17 @@ class PlaylistMasterViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPlaylistDetailSegue"{
-            //looks like "as" is now used for casting
-            let playlistDetailController = segue.destinationViewController as! PlaylistDetailViewController
-            playlistDetailController.playlist = Playlist(index: 0)
+            
+            let playlistImageView = sender!.view as! UIImageView
+            //if the tapped image is found in the playlistsArray successfully 
+            
+            if let index = find(playlistsArray, playlistImageView){
+                let playlistDetailController = segue.destinationViewController as! PlaylistDetailViewController
+                playlistDetailController.playlist = Playlist(index: index)
+            }
+            
+
+            
             
 
             
@@ -50,8 +58,7 @@ class PlaylistMasterViewController: UIViewController {
     }
     
     @IBAction func showPlaylistDetail(sender: AnyObject) {
-        println("Hey, stop touching me!")
-        performSegueWithIdentifier("showPlaylistDetailSegue", sender: sender)
+            performSegueWithIdentifier("showPlaylistDetailSegue", sender: sender)
     }
     
     
